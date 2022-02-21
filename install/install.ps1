@@ -12,7 +12,8 @@
 # ------------------------------------------------------------
 param (
     [string]$Version,
-    [string]$DaprRoot = "d:\local\dapr",
+    
+    [string]$DaprRoot = $env:DaprRoot ? $env:DaprRoot :"d:\local\dapr",
     [string]$DaprReleaseJsonUrl = "",
     [scriptblock]$CustomAssetFactory = $null
 )
